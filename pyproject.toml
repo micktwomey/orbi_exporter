@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "orbi_exporter"
+version = "0.1.0"
+description = "Export metrics from Orbi to OpenMetrics"
+authors = ["Michael Twomey <mick@twomeylee.name>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+prometheus-client = "^0.13.1"
+fastapi = "^0.74.1"
+uvicorn = "^0.17.5"
+httpx = "^0.22.0"
+pydantic = {extras = ["dotenv"], version = "^1.9.0"}
+structlog = "^21.5.0"
+
+[tool.poetry.dev-dependencies]
+mypy = "^0.931"
+black = "^22.1.0"
+isort = "^5.10.1"
+pytest = "^7.0.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
