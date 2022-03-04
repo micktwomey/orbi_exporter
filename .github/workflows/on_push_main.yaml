@@ -1,4 +1,4 @@
-name: on_push_master
+name: on_push_main
 
 on:
   workflow_dispatch:
@@ -9,6 +9,7 @@ on:
       - "*.*.*"
 
 permissions:
+  contents: read
   packages: write
 
 jobs:
