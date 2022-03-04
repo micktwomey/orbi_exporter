@@ -22,5 +22,6 @@ ENV ORBI_USERNAME admin
 ENV ORBI_PASSWORD password_unset
 ENV ORBI_LOG_FORMAT json
 
-# ENTRYPOINT [ "/usr/bin/python", "orbi_exporter" ]
-# CMD []
+EXPOSE 8000
+
+CMD ["uvicorn", "orbi_exporter.server:app", "--host", "0.0.0.0"]
