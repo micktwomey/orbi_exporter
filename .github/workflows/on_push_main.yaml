@@ -18,7 +18,7 @@ jobs:
       # From https://dev.to/cloudx/multi-arch-docker-images-the-easy-way-with-github-actions-4k54
       # Get the repository's code
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       # https://github.com/docker/setup-qemu-action
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
