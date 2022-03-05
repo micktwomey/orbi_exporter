@@ -1,17 +1,17 @@
-from concurrent.futures import process
 import dataclasses
 import logging
 import re
+from concurrent.futures import process
 
 import fastapi
 import fastapi.responses
 import httpx
 import pydantic
-from prometheus_client.core import GaugeMetricFamily, CounterMetricFamily, REGISTRY
-from prometheus_client import make_asgi_app
 import structlog
-import structlog.stdlib
 import structlog.processors
+import structlog.stdlib
+from prometheus_client import make_asgi_app
+from prometheus_client.core import REGISTRY, CounterMetricFamily, GaugeMetricFamily
 
 
 class Config(pydantic.BaseSettings):
