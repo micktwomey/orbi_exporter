@@ -2,24 +2,24 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app.kubernetes.io/name: orbi_exporter
-  name: orbi_exporter
+    app.kubernetes.io/name: orbi-exporter
+  name: orbi-exporter
 spec:
   selector:
     matchLabels:
-      app.kubernetes.io/name: orbi_exporter
+      app.kubernetes.io/name: orbi-exporter
   template:
     metadata:
       labels:
-        app.kubernetes.io/name: orbi_exporter
+        app.kubernetes.io/name: orbi-exporter
     spec:
       containers:
-        - name: orbi_exporter
+        - name: orbi-exporter
           envFrom:
             - configMapRef:
-                name: orbi_exporter
+                name: orbi-exporter
             - secretRef:
-                name: orbi_exporter
+                name: orbi-exporter
           image: ghcr.io/micktwomey/orbi_exporter:0.0.0
           imagePullPolicy: Always
           ports:
