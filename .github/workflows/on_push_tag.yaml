@@ -3,8 +3,6 @@ name: on_push_tag
 on:
   workflow_dispatch:
   push:
-    branches:
-      - "main"
     tags:
       - "*.*.*"
 
