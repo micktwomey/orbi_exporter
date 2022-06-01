@@ -10,7 +10,7 @@ python = "^3.10"
 prometheus-client = "^0.13.1"
 fastapi = "^0.74.1"
 uvicorn = "^0.17.5"
-httpx = "^0.22.0"
+httpx = "^0.23.0"
 pydantic = {extras = ["dotenv"], version = "^1.9.0"}
 structlog = "^21.5.0"
 
